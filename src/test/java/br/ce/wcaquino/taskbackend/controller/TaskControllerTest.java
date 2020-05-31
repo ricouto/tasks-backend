@@ -66,7 +66,7 @@ public class TaskControllerTest {
 		
 		try {
 			controller.save(todo);
-			Assert.fail("Não deveria chegar neste ponto!");
+			Assert.fail("Não deveria chegar neste ponto!!!");
 		} catch (ValidationException e) {
 			Assert.assertEquals("Due date must not be in past", e.getMessage());
 		}

@@ -8,7 +8,7 @@ import org.junit.Test;
 public class DateUtilsTest {
 	
 	@Test
-	public void deveRetornarTrueParaDataFuturas(){
+	public void deveRetornarTrueParaDataFutura(){
 		LocalDate date = LocalDate.of(2040, 01, 01);
 		Assert.assertTrue(DateUtils.isEqualOrFutureDate(date));
 	}
