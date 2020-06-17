@@ -18,7 +18,7 @@ pipeline{
 			steps{
 				withSonarQubeEnv('SONAR_DOCKER'){
 					echo "${scannerHome}/bin/sonar-scanner.bat"
-					bat "\"${scannerHome}\\bin\\sonar-scanner.bat\" -Dsonar.projectKey=DeployBack -Dsonar.host.url=http://192.168.99.100:9000 -Dsonar.login=f38b30956a2d15cb0e794c1dabddfe3f5eefd38d -Dsonar.java.binaries=target -Dsonar.coverage.exclusions=.mvn/wrapper/MavenWrapperDownloader.java, -Dsonar.coverage.exclusions=src/main/java/br/ce/wcaquino/taskbackend/model/Task.java, -Dsonar.coverage.exclusions=src/test/java/br/ce/wcaquino/taskbackend/controller/TaskControllerTest.java, -Dsonar.coverage.exclusions=src/test/java/br/ce/wcaquino/taskbackend/utils/DateUtilsTest.java, -Dsonar.coverage.exclusions=src/main/java/br/ce/wcaquino/taskbackend/TaskBackendApplication.java"
+					bat "\"${scannerHome}\\bin\\sonar-scanner.bat\" -Dsonar.projectKey=DeployBack -Dsonar.host.url=http://192.168.99.100:9000 -Dsonar.login=f38b30956a2d15cb0e794c1dabddfe3f5eefd38d -Dsonar.java.binaries=target -Dsonar.coverage.exclusions=.mvn/wrapper/MavenWrapperDownloader.java, src/main/java/br/ce/wcaquino/taskbackend/model/Task.java"
 				}
 			}
 		}

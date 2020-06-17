@@ -21,10 +21,11 @@
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
 		<sonar.exclusions>
-			**/.mvn/**,
-			**/src/test/**,
-			**/model/**,
-			**Application.java
+			.mvn/wrapper/MavenWrapperDownloader.java,
+			src/main/java/br/ce/wcaquino/taskbackend/TaskBackendApplication.java,
+			src/main/java/br/ce/wcaquino/taskbackend/model/Task.java,
+			src/test/java/br/ce/wcaquino/taskbackend/controller/TaskControllerTest.java,
+			src/test/java/br/ce/wcaquino/taskbackend/utils/DateUtilsTest.java
 		</sonar.exclusions>
 	</properties>
 
