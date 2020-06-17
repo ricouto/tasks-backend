@@ -1,8 +1,10 @@
 pipeline{
 	agent any
-	stages ('Just Test'){
-		steps{
-			bat 'echo no Eclipse!!!!'		
+	stages {
+		stage('Just Test'){
+			steps{
+				bat 'echo no Eclipse!!!!'
+				}
 		}
 	}
 }
