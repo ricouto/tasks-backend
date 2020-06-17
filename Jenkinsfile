@@ -14,6 +14,8 @@ pipeline{
 		stage('Sonar Analysis'){
 			environment{
 				scannerHome = tool 'SONAR_SCANNER'
+				echo env.scannerHome
+				bat 'cd scannerHome'
 			}
 			steps{
 				withSonarQubeEnv('SONAR_DOCKER'){
