@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage('Sonar Analysis'){
 			environment{
-				scannerHome = tool '"C:\Program Files (x86)\Jenkins\tools\hudson.plugins.sonar.SonarRunnerInstallation\SONAR_SCANNER\bin"'
+				scannerHome = tool 'C:/Program Files (x86)/Jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/SONAR_SCANNER/bin'
 			}
 			steps{
 				withSonarQubeEnv('SONAR_DOCKER'){
