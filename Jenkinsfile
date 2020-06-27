@@ -61,9 +61,13 @@ pipeline{
 			}
 		}
 		stage('Deploy Prod'){
+		environment{
+				dockerHome = "C:\Program Files\Docker Toolbox"
+			}
 			steps{
-				bat 'docker-compose build'
-				bat 'docker-compose up -d'
+				echo "${dockerHome}\docker-compose.exe"
+				bat "\"${dockerHome}\\docker-compose.exe\" docker-compose build"
+				bat "\"${dockerHome}\\docker-compose.exe\" docker-compose up -d"
 			}
 		}		
 	}
