@@ -66,8 +66,8 @@ pipeline{
 			}
 			steps{
 				echo "${dockerHome}\\docker-compose.exe"
-				bat "\"${dockerHome}\\docker-compose.exe\" docker-compose build"
-				bat "\"${dockerHome}\\docker-compose.exe\" docker-compose up -d"
+				bat "\"${dockerHome}\\docker-compose.exe\" build ."
+				bat "\"${dockerHome}\\docker-compose.exe\" up -d"
 			}
 		}		
 	}
